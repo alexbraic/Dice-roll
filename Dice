@@ -1,0 +1,28 @@
+int i;
+int[] raay = new int[10];
+for(i = 0; i < raay.Length; i++)
+{
+    Random dice = new Random();
+    int roll= dice.Next(1, 7);
+    raay[i] = roll;
+    if(roll == 3)
+    {
+        break;
+    }
+}
+foreach(var item in raay)
+{
+    if(item != 0)
+    {
+        Console.WriteLine(item);
+    }
+}
+int count = 0;
+foreach(var item in raay)
+{
+    if(item == 0)
+    {
+        count++;
+    }
+}
+Console.WriteLine($"There are {count} zeroes in the array.");
